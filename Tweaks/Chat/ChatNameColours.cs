@@ -421,7 +421,7 @@ public class ChatNameColours : ChatTweaks.SubTweak {
                 continue;
             }
 
-            if (payload is TextPayload tp && waitingBegin != null && tp.Text != null && tp.Text.Trim().Contains(' ')) {
+            if (payload is TextPayload tp && waitingBegin != null && tp.Text != null) {
                 if (!Config.LegacyColours) {
                     var colour = GetColor(waitingBegin.PlayerName, waitingBegin.World.Value.Name.ExtractText());
                     var glow = GetGlow(waitingBegin.PlayerName, waitingBegin.World.Value.Name.ExtractText());
